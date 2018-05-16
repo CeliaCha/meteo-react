@@ -1,12 +1,12 @@
 import React from 'react'
 
 class Day extends React.Component {
+      /**
+     * @props : 
+     * iconNumber = {DisplayWeather.props.datas.list[dayNumber*8].weather[0].icon}
+     * whichDay = dayNumber
+     */
 
-  /**
-   * Props : 
-   * iconNumber = Meteo.getFiveDays(this.props.datas.list, dayNumber)
-   * whichDay = dayNumber
-   */
 
   constructor() {
     super()
@@ -19,7 +19,6 @@ class Day extends React.Component {
     let theDay = new Date(Date.now()).getDay() + this.props.whichDay - 1
     if (this.props.whichDay + 3 === new Date(Date.now()).getDay()) return <p>Aujourd'hui : </p>
     else return <p>{this.state.days[theDay]} : </p>
-
   }
 
   render() {

@@ -1,20 +1,16 @@
 import React from 'react'
-import Day from './Day'
-import Meteo from '../utils/Meteo'
+import Day from './day/Day'
 
-class CityData extends React.Component {
+class DisplayWeather extends React.Component {
+    /**
+     * @props : 
+     * datas = {Meteo.state.cityData}
+     */
 
-    constructor() {
-        super()
-        this.state = {
-            days: ['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'],
-        }
-        
-    }
     renderDay(dayNumber) {
         return (
             <Day
-                iconNumber = {Meteo.getFiveDays(this.props.datas.list, dayNumber)}
+                iconNumber = {this.props.datas.list[dayNumber*8].weather[0].icon}
                 whichDay = {dayNumber}
             />
         )
@@ -35,4 +31,4 @@ class CityData extends React.Component {
     }
 }
 
-export default CityData;
+export default DisplayWeather;
