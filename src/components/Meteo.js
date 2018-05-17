@@ -26,7 +26,7 @@ export default class Meteo extends React.Component {
       axios.get(openWeatherUrl)
         .then(res => {
           this.setState({ cityData : res.data })
-          console.log(this.state.cityData.list)
+          console.log(this.state.cityData)
         })
       event.preventDefault();
     }
