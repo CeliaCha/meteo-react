@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import Meteo from './components/Meteo'
+import App from './components/App'
 
 class Headline extends React.Component {
   render() {
@@ -13,7 +13,7 @@ class Headline extends React.Component {
   }
 }
 
-
+// eslint-disable-next-line
 class Footer extends React.Component {
   render() {
     return (
@@ -22,12 +22,12 @@ class Footer extends React.Component {
   }
 }
 
-class AppMeteo extends React.Component {
+class Meteo extends React.Component {
   render() {
     return (
       <div>
         <Headline />
-        <Meteo />
+        <App />
         {/* <Footer /> */}
       </div>
 
@@ -36,6 +36,6 @@ class AppMeteo extends React.Component {
 }
 
 ReactDOM.render(
-  <AppMeteo />,
+  <Meteo />,
   document.getElementById('root')
 )
